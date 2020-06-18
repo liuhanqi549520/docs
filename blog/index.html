@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vuepress搭建过程 | 学习谈</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/docs/1.jpg">
+    <meta name="description" content="个人博客">
+    <link rel="preload" href="/docs/assets/css/0.styles.094888cc.css" as="style"><link rel="preload" href="/docs/assets/js/app.3375f20d.js" as="script"><link rel="preload" href="/docs/assets/js/2.c8a7e07a.js" as="script"><link rel="preload" href="/docs/assets/js/7.3de72a7c.js" as="script"><link rel="prefetch" href="/docs/assets/js/3.f76f0d1d.js"><link rel="prefetch" href="/docs/assets/js/4.d311dc07.js"><link rel="prefetch" href="/docs/assets/js/5.66cc6e29.js"><link rel="prefetch" href="/docs/assets/js/6.aa813820.js"><link rel="prefetch" href="/docs/assets/js/8.ab343281.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.094888cc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">学习谈</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人博客" class="dropdown-title"><span class="title">个人博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/blog/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/docs/bloa/" class="nav-link">
+  智能浇水车
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人博客" class="dropdown-title"><span class="title">个人博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/blog/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/docs/bloa/" class="nav-link">
+  智能浇水车
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vuepress搭建过程</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/blog/#一-vuepress的安装" class="sidebar-link">一.vuepress的安装</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/blog/#二-静态资源" class="sidebar-link">二.静态资源</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/blog/#三-发布到netlify" class="sidebar-link">三.发布到Netlify</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vuepress搭建过程"><a href="#vuepress搭建过程" class="header-anchor">#</a> Vuepress搭建过程</h1> <h2 id="一-vuepress的安装"><a href="#一-vuepress的安装" class="header-anchor">#</a> 一.vuepress的安装</h2> <ul><li><p>1.安装node.js</p></li> <li><p>2.建立一个文件夹vuepress-blog全局安装vuepress（yarn global add vuepress 或者 npm install -g vuepress）</p></li> <li><p>3.进入vuepress-blog文件夹，初始化项目 使用 npm init 或 npm init -y（默认yes）</p></li> <li><p>4.npm init -y 创建文件夹和文件 在 vuepress-blog 文件夹中创建 docs 文件夹，在 docs 中创建 .vuepress 文件夹，在.vuepress中创建 public 文件夹和 config.js 文件</p></li> <li><p>5.在config.js文件中配置网站标题，描述，主题等信息。</p></li></ul> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code> module.exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+   <span class="token string">&quot;title&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;学习谈&quot;</span>,
+   <span class="token string">&quot;description&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;关注学习&quot;</span>,
+   <span class="token string">&quot;base&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;/docs/&quot;</span>,
+   <span class="token string">&quot;head&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">&quot;link&quot;</span>,
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;rel&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;icon&quot;</span>,
+        <span class="token string">&quot;link&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;/favicon.ico&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>,
+    <span class="token punctuation">[</span>
+      <span class="token string">&quot;meta&quot;</span>,
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;name&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;viewport&quot;</span>,
+        <span class="token string">&quot;content&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;width=device-width,initial-scale=1,user-scalable=no&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">]</span>,
+  <span class="token string">&quot;theme&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;reco&quot;</span>,
+  <span class="token string">&quot;themeConfig&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;nav&quot;</span><span class="token builtin class-name">:</span> require<span class="token punctuation">(</span><span class="token string">'./nav'</span><span class="token punctuation">)</span>,
+    <span class="token string">&quot;type&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;blog&quot;</span>,
+    <span class="token string">&quot;blogConfig&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;category&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;location&quot;</span><span class="token builtin class-name">:</span> <span class="token number">2</span>,
+        <span class="token string">&quot;text&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;Category&quot;</span>
+      <span class="token punctuation">}</span>,
+      <span class="token string">&quot;tag&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;location&quot;</span><span class="token builtin class-name">:</span> <span class="token number">3</span>,
+        <span class="token string">&quot;text&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;Tag&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>,
+    <span class="token string">&quot;friendLink&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;title&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;vuepress搭建&quot;</span>,
+        <span class="token string">&quot;desc&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;vuepress个人搭建过程&quot;</span>,
+        <span class="token string">&quot;link&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;/guide/&quot;</span>,
+        <span class="token string">&quot;sidebar&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;auto&quot;</span>
+      <span class="token punctuation">}</span>,
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;title&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;物联网项目&quot;</span>,
+        <span class="token string">&quot;desc&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;Enjoy when you can, and endure when you must.&quot;</span>,
+        <span class="token string">&quot;email&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;1156743527@qq.com&quot;</span>,
+        <span class="token string">&quot;link&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;/action/&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>,
+    <span class="token string">&quot;logo&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;/2.jpg&quot;</span>,
+    <span class="token string">&quot;search&quot;</span><span class="token builtin class-name">:</span> true,
+    <span class="token string">&quot;searchMaxSuggestions&quot;</span><span class="token builtin class-name">:</span> <span class="token number">10</span>,
+    <span class="token string">&quot;sidebar&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;auto&quot;</span>,
+    <span class="token string">&quot;lastUpdated&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;Last Updated&quot;</span>,
+    <span class="token string">&quot;author&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;Liu Hanqi&quot;</span>,
+    <span class="token string">&quot;authorAvatar&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;/1.jpg&quot;</span>,
+    //<span class="token string">&quot;record&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;xxxx&quot;</span>,
+    <span class="token string">&quot;startYear&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;2020&quot;</span>
+   <span class="token punctuation">}</span>,
+   <span class="token string">&quot;markdown&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;lineNumbers&quot;</span><span class="token builtin class-name">:</span> <span class="token boolean">false</span>
+   <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br></div></div><ul><li>6.在package.json文件里添加两个启动命令</li></ul> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token string">&quot;scripts&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+<span class="token string">&quot;dev&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;vuepress dev docs&quot;</span>,
+<span class="token string">&quot;build&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;vuepress build docs&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>7.一切准备就绪后 yarn dev 查看http://localhost:8080/效果。</li></ul> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>vuepress-blog
+├─── docs
+│   ├── README.md
+│   └── .vuepress
+│       ├── public
+│       └── config.js
+└── package.json
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="二-静态资源"><a href="#二-静态资源" class="header-anchor">#</a> 二.静态资源</h2> <ul><li>1.相对路径
+所有的 Markdown 文件都会被 webpack 编译成 Vue 组件，因此你可以，并且应该更倾向于使用相对路径（Relative URLs）来引用所有的静态资源：</li></ul> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token operator">!</span><span class="token punctuation">[</span>An image<span class="token punctuation">]</span><span class="token punctuation">(</span>./image.png<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language- extra-class"><pre><code>同样地，这在 *.vue 文件的模板中一样可以工作，图片将会被 url-loader 和 file-loader 处理，在运行生成静态文件的构建任务时，文件会被复制到正确的位置。
+除此之外，你也使用 ~ 前缀来明确地指出这是一个 webpack 的模块请求，这将允许你通过 webpack 别名来引用文件或者 npm 的依赖：
+```bash
+![Image from alias](~@alias/image.png)
+![Image from dependency](~some-dependency/image.png)
+</code></pre></div><div class="language- line-numbers-mode"><pre class="language-text"><code>
+- 2.公共文件
+
+有时，你可能需要提供一个静态资源，但是它们并不直接被你的任何一个 markdown 文件或者主题组件引用 —— 举例来说，favicons 和 PWA 的图标，在这种情形下，你可以将它们放在 .vuepress/public 中， 它们最终会被复制到生成的静态文件夹中
+
+- 3.基础路径
+
+如果你的网站会被部署到一个非根路径，你将需要在 .vuepress/config.js 中设置 base，举例来说，如果你打算将你的网站部署到 https://foo.github.io/bar/，那么 base 的值就应该被设置为 &quot;/bar/&quot; (应当总是以斜杠开始，并以斜杠结束)。
+有了基础路径（Base URL），如果你希望引用一张放在 .vuepress/public 中的图片，你需要使用这样路径：/bar/image.png，然而，一旦某一天你决定去修改 base，这样的路径引用将会显得异常脆弱。为了解决这个问题，VuePress 提供了内置的一个 helper $withBase（它被注入到了 Vue 的原型上），可以帮助你生成正确的路径：
+```bash
+&lt;img :src=&quot;$withBase('/foo.png')&quot; alt=&quot;foo&quot;&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>值得一提的是，你不仅可以在你的 Vue 组件中使用上述的语法，在 Markdown 文件中亦是如此。
+最后补充一句，一个 base 路径一旦被设置，它将会自动地作为前缀插入到 .vuepress/config.js 中所有以 / 开始的资源路径中。</p> <h2 id="三-发布到netlify"><a href="#三-发布到netlify" class="header-anchor">#</a> 三.发布到Netlify</h2> <ul><li><p>1.注册 Netlify 的账号并登录，需要提供一个电子邮件。</p></li> <li><p>2.新建一个项目，在设置里面填入 GitHub 代码库的链接，填写构建的命令和输出文件夹</p></li> <li><p>3.构建成功后，设置定制的域名。</p></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/assets/js/app.3375f20d.js" defer></script><script src="/docs/assets/js/2.c8a7e07a.js" defer></script><script src="/docs/assets/js/7.3de72a7c.js" defer></script>
+  </body>
+</html>
